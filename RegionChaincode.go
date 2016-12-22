@@ -71,7 +71,7 @@ func (t *RegionChaincode)  RegisterPolicy(stub shim.ChaincodeStubInterface, args
 	var RegionDataList []RegionData
 	var err error
 
-	if len(args) != 14 {
+	if len(args) != 15 {
 		return nil, errors.New("Incorrect number of arguments. Need 14 arguments")
 	}
 
