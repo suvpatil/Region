@@ -77,15 +77,15 @@ func (t *RegionChaincode)  RegisterPolicy(stub shim.ChaincodeStubInterface, args
 
 	// Initialize the chaincode
 	RegionDataObj.REGION_NAME = args[0]
-	RegionDataObj.INSURED_ID,err = args[1]
+	RegionDataObj.INSURED_ID = args[1]
 	RegionDataObj.INSURED = args[2]
 	RegionDataObj.BUSINESS_AREA = args[3]
-	RegionDataObj.LINE_OF_BUSINESS_ID,err = args[4]
+	RegionDataObj.LINE_OF_BUSINESS_ID = args[4]
 	RegionDataObj.LINE_OF_BUSINESS = args[5]
 	RegionDataObj.POLICY = args[6]
 	RegionDataObj.DEAL_ID,err = strconv.Atoi(args[7])
 	RegionDataObj.DEAL_NUM = args[8]
-	RegionDataObj.BROKER_ID,err = args[9]
+	RegionDataObj.BROKER_ID = args[9]
 	RegionDataObj.BROKER = args[10]
 	RegionDataObj.INCEPTION_DATE = args[11]
 	RegionDataObj.EXPIRATION_DATE = args[12]
