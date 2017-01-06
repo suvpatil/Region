@@ -22,15 +22,15 @@ var regionIndexTxStr = "_regionIndexTxStr"
 
 type RegionData struct{
 	REGION_NAME string `json:"REGION_NAME"`
-	INSURED_ID int `json:"INSURED_ID"`
+	INSURED_ID string `json:"INSURED_ID"`
 	INSURED string `json:"INSURED"`
 	BUSINESS_AREA string `json:"BUSINESS_AREA"`
-	LINE_OF_BUSINESS_ID int `json:"LINE_OF_BUSINESS_ID"`
+	LINE_OF_BUSINESS_ID string `json:"LINE_OF_BUSINESS_ID"`
 	LINE_OF_BUSINESS string `json:"LINE_OF_BUSINESS"`
 	POLICY string `json:"POLICY"`
 	DEAL_ID int `json:"DEAL_ID"`
 	DEAL_NUM string `json:"DEAL_NUM"`
-	BROKER_ID int `json:"BROKER_ID"`
+	BROKER_ID string `json:"BROKER_ID"`
 	BROKER string `json:"BROKER"`
 	INCEPTION_DATE string `json:"INCEPTION_DATE"`
 	EXPIRATION_DATE string `json:"EXPIRATION_DATE"`
@@ -77,15 +77,15 @@ func (t *RegionChaincode)  RegisterPolicy(stub shim.ChaincodeStubInterface, args
 
 	// Initialize the chaincode
 	RegionDataObj.REGION_NAME = args[0]
-	RegionDataObj.INSURED_ID,err = strconv.Atoi(args[1])
+	RegionDataObj.INSURED_ID,err = args[1]
 	RegionDataObj.INSURED = args[2]
 	RegionDataObj.BUSINESS_AREA = args[3]
-	RegionDataObj.LINE_OF_BUSINESS_ID,err = strconv.Atoi(args[4])
+	RegionDataObj.LINE_OF_BUSINESS_ID,err = args[4]
 	RegionDataObj.LINE_OF_BUSINESS = args[5]
 	RegionDataObj.POLICY = args[6]
 	RegionDataObj.DEAL_ID,err = strconv.Atoi(args[7])
 	RegionDataObj.DEAL_NUM = args[8]
-	RegionDataObj.BROKER_ID,err = strconv.Atoi(args[9])
+	RegionDataObj.BROKER_ID,err = args[9]
 	RegionDataObj.BROKER = args[10]
 	RegionDataObj.INCEPTION_DATE = args[11]
 	RegionDataObj.EXPIRATION_DATE = args[12]
